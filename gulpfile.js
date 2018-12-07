@@ -53,34 +53,16 @@ gulp.task('libraries_CSS', () => {
 // minifying js script
 gulp.task('scripts', () => {
     gulp.src(['js/**/*.js'])
-    // .pipe(babel({
-    //     presets: [['env', {
-    //         loose: true,
-    //         modules: false,
-    //         exclude: ['transform-es2015-typeof-symbol']
-    //     }]],
-    //     plugins: ['transform-es2015-modules-strip', 'transform-object-rest-spread']
-    // }))
-    // .pipe(gulp.dest('./build/js'))
-    // .pipe(concat('main.js', {newLine:';'}))
-    // .pipe(minify({
-    //     ext:{
-    //         min:'.min.js'
-    //     },
-    //     noSource: false
-    // }))
-    // .pipe(gulp.dest('./build/js'));
-    return gulp.src('./js/*.js')
-       .pipe(gulp.dest('./build/js'))
-       .pipe(minify({
-            ext:{
-                min:'.min.js'
-            },
-            noSource: false
-        }).on('error', function(e){
-           console.log(e);
-        }))
-        .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/js'))
+    .pipe(minify({
+        ext:{
+            min:'.min.js'
+        },
+        noSource: false
+    }).on('error', function(e){
+        console.log(e);
+    }))
+    .pipe(gulp.dest('./build/js'));
 });
 
 // library scripts

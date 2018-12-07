@@ -2,20 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard | IEEE Helwan Student Chapter</title>
     <meta name="author" content="Mohamed Emad">
+    <meta name="keywords" content="IEEE Helwan Student Branch, Dashboard, Dashboard Articles">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
 <body>
     <div class="dashboard">
-        <button id="dash-menu-toggle" class="dash-menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <!-- menu button in mobile view -->
+        <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
+        <!-- Start Horizontal Menu -->
         <aside>
             <div class="site-branding">
                 <a href="index.html"> <img src="./images/logo.png" alt="IEEE Helwan Student Branch"> </a>
@@ -23,8 +26,8 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="dashboard_posts.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Posts</a>
-                        <a href="add-post.html"><i class="fa fa-pencil" aria-hidden="true"></i> Add post</a>
+                        <a href="dashboard_articles.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Articles</a>
+                        <a href="add-article.html"><i class="fa fa-pencil" aria-hidden="true"></i> Add Article</a>
                         <a href="users.html"><i class="fa fa-users" aria-hidden="true"></i> users</a>
                         <a href="add-user.html"><i class="fa fa-user-plus" aria-hidden="true"></i> add user</a>
                         <a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a>
@@ -32,8 +35,32 @@
                 </ul>
             </nav>
         </aside>
+        <!-- End Horizontal Menu -->
         <main>
+            <!-- start posts wrapper -->
             <div class="posts">
+                <!-- start post -->
+                <div class="post">
+                    <a href="" title="">
+                        <img src="https://via.placeholder.com/100" alt="">
+                        <div class="description-container">
+                            <h3>Post Title</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dolore
+                                accusantium
+                                corporis officiis quaerat facilis facere, officia repellat reprehenderit quod animi
+                                minima,
+                                nisi praesentium fugiat harum provident, maiores veritatis cupiditate.</p>
+                        </div>
+                    </a>
+                    <div class="actions">
+                        <i class="fa fa-user" aria-hidden="true"></i> Creator Name
+                        <a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                        <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <!-- end post -->
+
+                <!-- start post -->
                 <div class="post">
                     <a href="">
                         <img src="https://via.placeholder.com/100" alt="">
@@ -52,8 +79,11 @@
                         <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </div>
                 </div>
+                <!-- end post -->
+
+                <!-- start post -->
                 <div class="post">
-                    <a href="">
+                    <a href="" title="">
                         <img src="https://via.placeholder.com/100" alt="">
                         <div class="description-container">
                             <h3>Post Title</h3>
@@ -61,7 +91,8 @@
                                 accusantium
                                 corporis officiis quaerat facilis facere, officia repellat reprehenderit quod animi
                                 minima,
-                                nisi praesentium fugiat harum provident, maiores veritatis cupiditate.</p>
+                                nisi praesentium fugiat harum provident, maiores veritatis cupiditate.
+                            </p>
                         </div>
                     </a>
                     <div class="actions">
@@ -70,34 +101,20 @@
                         <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
                     </div>
                 </div>
-                <div class="post">
-                    <a href="">
-                        <img src="https://via.placeholder.com/100" alt="">
-                        <div class="description-container">
-                            <h3>Post Title</h3>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dolore
-                                accusantium
-                                corporis officiis quaerat facilis facere, officia repellat reprehenderit quod animi
-                                minima,
-                                nisi praesentium fugiat harum provident, maiores veritatis cupiditate.</p>
-                        </div>
-                    </a>
-                    <div class="actions">
-                        <i class="fa fa-user" aria-hidden="true"></i> Creator Name
-                        <a href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
-                    </div>
-                </div>
+                <!-- end post -->
             </div>
         </main>
     </div>
-
+    <!-- start copy rights -->
     <div class="copy">
         <div class="container">
-            <p>&copy; IEEE-HELWAN STUDENT BRANCH - All Copy Right Reseved</p>
+            <p>&copy; IEEE-HELWAN STUDENT BRANCH - All Copy Right Reseved 2019.</p>
         </div>
     </div>
-    <script src="js/menu-toggle.min.js"></script>
+    <!-- end copy rights -->
+
+    <!-- calling JS files -->
+    <script src="js/dashboard-menu.min.js"></script>
 
 </body>
 
