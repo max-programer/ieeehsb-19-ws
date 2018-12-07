@@ -1,0 +1,7 @@
+window.addEventListener('scroll', function () {
+    if (window.pageYOffset >= 200){
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
+});

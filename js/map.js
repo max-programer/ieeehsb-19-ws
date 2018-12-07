@@ -4,4 +4,4 @@ function map() {
         zoom: 5,
     };
     let map = new window.google.maps.Map(document.getElementById("googleMap"), mapProp);
-}
+};
