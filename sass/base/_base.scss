@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $main_font-family;
+}
+
+ul>li {
+    list-style-type: none;
+}
+// set links styles
+a {
+    color: $main_color;
+    font-family: $main_font-family;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+}
+// set body style
+body {
+    background: $white;
+    font-family: $main_font-family;
+}
+// all images default style
+img {
+    width: 100%;
+    display: block;
+}
+// contnet wrapper 
+.content-wrap {
+    padding: 0 10px;
+
+    @include breakpoint($bp-desktop) {
+        @include container($main-width);
+    }
+}
+// content wrapper with no padding in mobile view
+.content-wrap__no-padding {
+    @include breakpoint($bp-tablet) {
+        padding: 0 10px;
+    }
+
+    @include breakpoint($bp-desktop) {
+        @include container($main-width);
+    }
+}
+
+// super text style
+sup {
+    font-size: small !important;
+    vertical-align: super !important;
+}
+
+// buttons style
+.button {
+    @include breakpoint($bp-mobile) {
+        padding: 8px 10px;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 1px;
+        margin: 20px 0;
+    }
+
+    @include breakpoint($bp-tablet) {
+        padding: 8px 18px;
+
+    }
+
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+    background-color: $main_color;
+    color: #000;
+    border: 1px solid $main_color;
+    font-family: $main_font-family;
+    border-radius: 4px;
+    text-transform: $main_text-transform;
+    @include transition-time(0.2s, ease-in-out);
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $main_color;
+        color: $main_color;
+    }
+
+    cursor: pointer;
+}

@@ -32,6 +32,8 @@ gulp.task("styles", function () {
     .pipe(sass({
         style: 'expanded',
         includePaths: ['node_modules/susy/sass/']
+    }).on('error', function(e){
+        console.log(e);
     }))
     .pipe(autoprefixer("last 5 version", "safari 5", "ie 8", "ie 9"))
     .pipe(gulp.dest("./build/css"))
