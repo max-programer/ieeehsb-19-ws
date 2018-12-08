@@ -49,6 +49,7 @@ header {
   }
 }
 
+/* posts Layout ================================ */
 .posts {
   @include span(12 of 12);
 
@@ -64,3 +65,5 @@ header {
     }
   }
 }
+
+/* Dashboard Layout ================================ */
