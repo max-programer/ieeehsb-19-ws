@@ -78,9 +78,9 @@ sup {
     display: inline-block;
     width: auto;
     text-decoration: none;
-    background-color: $main_color;
-    color: #000;
-    border: 1px solid $main_color;
+    background-color: #000;
+    color: $white;
+    border: 1px solid #000;
     font-family: $main_font-family;
     border-radius: 4px;
     text-transform: $main_text-transform;
@@ -88,9 +88,12 @@ sup {
 
     &:hover {
         background-color: transparent;
-        border: 1px solid $main_color;
-        color: $main_color;
+        border: 1px solid #000;
+        color: $white;
     }
 
     cursor: pointer;
+}
+.clear-fix{
+    clear: both;
 }

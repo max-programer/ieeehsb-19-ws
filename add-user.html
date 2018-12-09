@@ -12,89 +12,83 @@
 </head>
 
 <body>
-    <div class="dashboard">
-        <!-- header -->
-        <header>
-            <!-- menu button in mobile view -->
-            <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-                <i class="fa fa-bars" aria-hidden="true"></i>
-            </button>
-            <!-- site brand -->
-            <div class="site-branding">
-                <a href="index.html"> <img src="./images/logo.png" alt="IEEE Helwan Student Branch"> </a>
-            </div><!-- .site-branding -->
-        </header>
-        <!-- aside -->
-        <aside>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="dashboard_articles.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Articles</a>
-                        <a href="add-article.html"><i class="fa fa-pencil" aria-hidden="true"></i> Add Article</a>
-                        <a href="users.html"><i class="fa fa-users" aria-hidden="true"></i> users</a>
-                        <a href="add-user.html"><i class="fa fa-user-plus" aria-hidden="true"></i> add user</a>
-                        <a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
-        <!-- main -->
-        <main>
-            <div class="login-form add-user">
-                <!-- link with logo to go to the main page -->
-                <a href="index.html">
-                    <img src="./images/logo.png" alt="ieee-logo">
-                </a>
-                <!-- intro to form -->
-                <div class="intro">
-                    <h1>Add Admin OR User</h1>
+    <header>
+        <!-- site brand -->
+        <div class="site-branding">
+            <a href="index.html">
+                <img src="./images/logo.png" alt="IEEE Helwan Student Branch">
+            </a>
+        </div><!-- .site-branding -->
+        <!-- menu button in mobile view -->
+        <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="clear-fix"></div>
+    </header>
+    <!-- aside -->
+    <aside>
+        <nav>
+            <ul>
+                <li>
+                    <a href="dashboard_articles.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Articles</a>
+                    <a href="add-article.html"><i class="fa fa-pencil" aria-hidden="true"></i> Add Article</a>
+                    <a href="users.html"><i class="fa fa-users" aria-hidden="true"></i> users</a>
+                    <a href="add-user.html"><i class="fa fa-user-plus" aria-hidden="true"></i> add user</a>
+                    <a href="index.html"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- main -->
+    <main class="login-form add-user">
+        <div class="content-wrap">
+            <!-- login form -->
+            <form id="form" action="" method="post">
+                <h3>Add Admin || User</h3>
+                <!-- User Name -->
+                <div class="field-wrap">
+                    <label>
+                        Name<span class="req">*</span>
+                    </label>
+                    <input id="name" type="text" required autocomplete="on" />
                 </div>
-                <!-- login form -->
-                <form id="form" action="" method="post">
-                    <!-- User Name -->
-                    <div class="field-wrap">
-                        <label>
-                            Name<span class="req">*</span>
-                        </label>
-                        <input id="name" type="text" required autocomplete="on" />
-                    </div>
-                    <!-- email input -->
-                    <div class="field-wrap">
-                        <label>
-                            Email Address<span class="req">*</span>
-                        </label>
-                        <input id="email" type="email" required autocomplete="on" />
-                    </div>
-                    <!-- position input -->
-                    <div class="field-wrap">
+                <!-- email input -->
+                <div class="field-wrap">
+                    <label>
+                        Email Address<span class="req">*</span>
+                    </label>
+                    <input id="email" type="email" required autocomplete="on" />
+                </div>
+                <!-- position input -->
+                <div class="field-wrap">
 
-                        <select name="position" id="position">
-                            <option value="admin" disabled selected>Role <span class="req">*</span></option>
-                            <option value="admin">Admin</option>
-                            <option value="user">User</option>
-                        </select>
-                    </div>
-                    <!-- password input -->
-                    <div class="field-wrap">
-                        <label>
-                            Password<span class="req">*</span>
-                        </label>
-                        <input id="pass" type="password" required autocomplete="off" />
-                    </div>
-                    <!-- password input -->
-                    <div class="field-wrap">
-                        <label>
-                            Re-Password<span class="req">*</span>
-                        </label>
-                        <input id="re_password" type="password" required autocomplete="off" />
-                    </div>
+                    <select name="position" id="position">
+                        <option value="admin" disabled selected>Role <span class="req">*</span></option>
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </div>
+                <!-- password input -->
+                <div class="field-wrap">
+                    <label>
+                        Password<span class="req">*</span>
+                    </label>
+                    <input id="pass" type="password" required autocomplete="off" />
+                </div>
+                <!-- password input -->
+                <div class="field-wrap">
+                    <label>
+                        Re-Password<span class="req">*</span>
+                    </label>
+                    <input id="re_password" type="password" required autocomplete="off" />
+                </div>
 
-                    <!-- login button -->
-                    <button type="submit">Add User</button>
-                </form>
-            </div>
-        </main>
-    </div>
+                <!-- subit button -->
+                <input type="submit" class="button" value="Add">
+            </form>
+        </div>
+
+    </main>
     <div class="copy">
         <div class="content-wrap">
             <p>&copy; IEEE-HELWAN STUDENT BRANCH - All Copy Right Reseved</p>
@@ -102,6 +96,7 @@
     </div>
     <script src="js/dashboard-menu.min.js"></script>
     <script src="js/login-form.min.js"></script>
+    <script src="js/sticky-menu.min.js"></script>
 </body>
 
 </html>

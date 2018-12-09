@@ -1,27 +1,25 @@
 .login-form {
-    margin: 40px auto;
-
-    img {
-        display: block;
-        margin: auto
-    }
-
-    .intro {
-        text-align: center;
-
-        h1 {
-            font-weight: bold
-        }
-    }
 
     form {
+        @include span (12 of 12);
+        @include breakpoint($bp-tablet){
+            @include span (6 of 12);
+        }
+        @include breakpoint($bp-desktop){
+            @include span (9 of 12);
+        }
         background: rgba($main_color, .9);
+        margin: auto;
         padding: 40px;
-        max-width: 600px;
-        margin: 40px auto;
         border-radius: 4px;
         box-shadow: 0 4px 10px 4px rgba($main_color, .3);
-
+        h3 {
+            text-align: center;
+            color: $white;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px
+        }
         .field-wrap {
             position: relative;
             margin-bottom: 40px;
@@ -104,27 +102,6 @@
                 }
             }
             
-        }
-
-        button {
-            display: block;
-            border: 0;
-            outline: none;
-            border-radius: 0;
-            padding: 15px 5px;
-            font-size: 1rem;
-            letter-spacing: .1em;
-            background: #000;
-            color: $white;
-            -webkit-appearance: none;
-            border-radius: 5px;
-            @include transition-time(0.5s, ease-in-out);
-
-            &:hover,
-            &:focus {
-                background: $white;
-                color: $main_color;
-            }
         }
     }
 }

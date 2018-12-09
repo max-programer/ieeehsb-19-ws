@@ -3,24 +3,19 @@ header {
     border-bottom: solid 1px #000;
     z-index: 999;
     position: fixed;
-    height: 100px;
+    height: auto;
 
     .site-branding {
-        padding: 8px 0 8px 0;
         img {
-            display: block;
-            width: 100%;
-            height: 100%;
+            height: 60px;
         }
     }
 
     .site-navigation {
-        margin-top: 12px;
         ul {
             display: none;
             li {
                 display: block;
-                list-style: none;
                 a {
                     display: block;
                     text-align: left;
@@ -117,19 +112,20 @@ header {
             }
         }
     }
-}
-
-.menu-toggle {
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    padding-top: 5px;
-    border: 1px solid $main_color;
-
-    @include breakpoint($bp-desktop) {
-        display: none;
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        padding-top: 5px;
+        border: 1px solid $main_color;
+    
+        @include breakpoint($bp-desktop) {
+            display: none;
+        }
     }
 }
+
+
 
 header.sticky {
     background: $white;

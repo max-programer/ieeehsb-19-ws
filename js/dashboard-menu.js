@@ -2,9 +2,9 @@ let menu_button = document.getElementById('menu-toggle'),
     aside = document.querySelector('aside');
 
 menu_button.addEventListener('click', function () {
-    if (aside.style.display == "none") {
-        aside.style.display = "block";
+    if (aside.style.left == "-100%") {
+        aside.style.left = "0%";
     } else {
-        aside.style.display = "none";
+        aside.style.left = "-100%";
     }
 });

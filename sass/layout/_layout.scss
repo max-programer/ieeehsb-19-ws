@@ -1,14 +1,12 @@
 //susy configurations
-$susy: (
-  // set number of columns
-  columns: 12,
-  // set gutters between columns
-  gutters: 0.5,
-  //gutter-position: inside,
-  global-box-sizing: border-box,
-  //output: isolate
-  flow: susy-get(flow)
-);
+$susy: ( // set number of columns
+columns: 12,
+// set gutters between columns
+gutters: 0.5,
+//gutter-position: inside,
+global-box-sizing: border-box,
+//output: isolate
+flow: susy-get(flow));
 /*break points*/
 $bp-mobile: 320px;
 $bp-tablet: 768px;
@@ -67,3 +65,19 @@ header {
 }
 
 /* Dashboard Layout ================================ */
+
+aside {
+  @include span (9 of 12);
+
+  @include breakpoint($bp-desktop) {
+    @include span (3 of 12);
+  }
+}
+
+main {
+  @include span (12 of 12);
+
+  @include breakpoint($bp-desktop) {
+    @include span (9 of 12 last);
+  }
+}
