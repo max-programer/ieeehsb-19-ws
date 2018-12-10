@@ -37,24 +37,3 @@ main{
     top: 60px;
     margin: 50px auto 100px;
 }
-
-.posts {
-    padding: 10px;
-
-    .post {
-
-        @include breakpoint($bp_tablet) {
-            padding: 10px;
-        }
-
-        @include breakpoint($bp_desktop) {
-            // margin: 10px;
-        }
-        .actions{
-            a{
-                display: inline-block
-            }
-        }
-
-    }
-}

@@ -97,3 +97,11 @@ sup {
 .clear-fix{
     clear: both;
 }
+
+.entry-header{
+    text-align: center;
+    color: $main_color;
+    font-weight: 400;
+    font-family: $main_font-family;
+    text-transform: $main_text-transform;
+}
