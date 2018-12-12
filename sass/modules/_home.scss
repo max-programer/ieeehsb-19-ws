@@ -48,18 +48,18 @@
             
         }
     }
-    .arrow{
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        margin-top: -35px;
-        color: #fff;
-        z-index: 9;
-    }
-    #arrow-left{
-        left: 10px;
-    }
-    #arrow-right{
-        right: 10px;
-    }
+}
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    color: #fff;
+    z-index: 9;
+}
+#arrow-left{
+    left: 10px;
+}
+#arrow-right{
+    right: 10px;
 }
