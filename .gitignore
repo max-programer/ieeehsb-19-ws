@@ -15,3 +15,6 @@ yarn-error.log
 .editorconfig
 .env.example
 .gitattributes
+/bower_components/
+package-lock.json
+/build
