@@ -177,19 +177,27 @@
 
 .confereces{
     position: relative;
-    height: 1000px;
-
     .background-text {
         position: absolute;
         z-index: -1;
-        top: -31%;
         opacity: 0.1;
         text-shadow: 0px 0px #2b3896;
+        
         p {
             color: #2a5096;
             text-align: center;
             font-weight: 900;
             font-size: 700px;
+        }
+        &:first-child{
+            top: -20%;
+        }
+        &:nth-child(2){
+            top: 10%;
+            
+            p{
+                font-size: 450px
+            }
         }
     }
     .overlay{
@@ -203,6 +211,8 @@
         opacity: 0.2;
     }
     .content-wrap{
+        position: relative;
+        z-index: 3;
         .entry-header{
             color: #363636;
             margin-top: 50px;
@@ -214,5 +224,58 @@
                 font-weight: 900;
             }
         }
+        .content-row{
+            margin: 125px 0;
+            .left-content{
+                float: left;
+                direction: rtl;
+                ul{
+                    text-align: right;
+                    li{
+                        list-style-type: circle;
+                    }
+                }
+                
+
+            }
+            .right-content{
+                float: right;
+                text-align: left;
+                
+                ul{
+                    li{
+                        list-style-type: circle;
+                    }
+                }
+                .image-wrapper{
+                    .frame{
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.image-wrapper{
+    position: relative;
+    .frame{
+        position: absolute;
+        border: 1px solid #363636;
+        height: 500px;
+        width: 580px;
+        top: -80px;
+        left: 20px;
+        h3{
+            text-align: left;
+            font-size: 40px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #363636;
+            margin-left: 20px
+        }
+    }
+    img{
+        width: 558px;
     }
 }
