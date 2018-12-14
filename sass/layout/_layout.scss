@@ -102,3 +102,34 @@ main {
     }
   }
 }
+
+.confereces{
+  .content-row{
+    @include span (12 of 12);
+    .left-content{
+      @include span (12 of 12);
+    }
+    .right-content{
+      @include span (12 of 12);
+    }
+    @include breakpoint($bp-tablet){
+      .left-content{
+        @include span (6 of 12);
+      }
+      .right-content{
+        @include span (6 of 12 last);
+      }
+    }
+  }
+}
+
+/* Misc page ================================ */
+
+.faqs {
+  .faq {
+    @include span (12 of 12);
+    @include breakpoint($bp-tablet) {
+      @include gallery (4 of 12);
+    }
+  }
+}
