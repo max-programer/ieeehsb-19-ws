@@ -7,6 +7,8 @@ gutters: 0.5,
 global-box-sizing: border-box,
 //output: isolate
 flow: susy-get(flow));
+$siminars: (columns: 12,
+gutters: 5);
 /*break points*/
 $bp-mobile: 320px;
 $bp-tablet: 768px;
@@ -79,5 +81,24 @@ main {
 
   @include breakpoint($bp-desktop) {
     @include span (9 of 12 last);
+  }
+}
+
+/* Misc page ================================ */
+.seminars {
+  .seminar {
+    @include with-layout($siminars) {
+      @include span (12 of 12);
+
+      @include breakpoint($bp-tablet) {
+        @include span (4 of 12);
+      }
+
+      &:last-child {
+        @include breakpoint($bp-tablet) {
+          @include span (4 of 12 last);
+        }
+      }
+    }
   }
 }
