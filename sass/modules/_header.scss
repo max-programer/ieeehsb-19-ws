@@ -1,9 +1,12 @@
 header {
-    background-color: transparent;
+    background-color: $white;
     border-bottom: solid 1px #000;
     z-index: 999;
     position: fixed;
     height: auto;
+    @include breakpoint($bp-desktop){
+        background-color: transparent;
+    }
 
     .site-branding {
         img {
@@ -14,8 +17,10 @@ header {
     .site-navigation {
         ul {
             display: none;
+
             li {
                 display: block;
+
                 a {
                     display: block;
                     text-align: left;
@@ -23,7 +28,8 @@ header {
                     text-decoration: none;
                     font-size: 17px;
                     @include transition-time(0.5s, ease-in-out);
-                    @include link-style($main_color, #fff);
+
+
                     &:hover,
                     &:focus {
                         color: #fff
@@ -45,9 +51,11 @@ header {
                         }
                     }
                 }
+
                 &:active,
-                &:focus {
-                    ul{
+                &:focus,
+                &:hover {
+                    ul {
                         display: block;
                     }
                 }
@@ -69,7 +77,12 @@ header {
                     &:hover,
                     &:focus {
                         background-color: $main_color;
-                        color: #fff
+                        border-color: $white;
+
+                        a {
+                            color: $white;
+                        }
+
                     }
                 }
 
@@ -81,22 +94,22 @@ header {
                         top: 100%;
                         left: 0;
                         display: none;
-                        padding-top: 20px;
 
                         li {
                             display: block;
-                            padding: 5px 20px;
                             border: solid 1px $main_color;
 
                             a {
-                                color: $main_color
+                                padding: 5px 40px;
+                                color: $main_color;
                             }
+
                         }
                     }
 
                     &:hover,
-                    &:focus {
-                        color: $white !important;
+                    &:focus,
+                    &:active {
                         ul {
                             display: block;
 
@@ -108,17 +121,19 @@ header {
                         }
                     }
                 }
-                
+
             }
         }
     }
+
     .menu-toggle {
         width: 40px;
         height: 40px;
         background: transparent;
         padding-top: 5px;
         border: 1px solid $main_color;
-    
+        color: $main_color;
+
         @include breakpoint($bp-desktop) {
             display: none;
         }
@@ -131,20 +146,33 @@ header.sticky {
     background: $white;
     color: $main_color;
 
-    .menu-item-has-children {
-        li {
-            background: $white;
-            a {
-                color: $main_color !important;
-            }
-        }
+    .site-navigation {
+        ul {
 
-        &:hover,
-        &:focus {
-            background: $main_color;
+            .menu-item-has-children {
+                ul {
+                    li {
+                        background: $white;
 
-            a {
-                color: #fff;
+                        a {
+                            color: $main_color;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            li {
+                                background: $main_color !important;
+
+                                a {
+                                    color: #fff;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+
             }
         }
     }
