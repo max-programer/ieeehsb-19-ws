@@ -38,3 +38,16 @@
         }
     }
 }
+.single-article{
+    iframe{
+        display: none;
+    }
+    @include breakpoint($bp-desktop){
+        iframe{
+            display: block
+        }
+        p{
+            display: none;
+        }
+    }
+}
