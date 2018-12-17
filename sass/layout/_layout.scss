@@ -133,3 +133,27 @@ main {
     }
   }
 }
+/* about page ================================ */
+.page-content{
+  .entry-section{
+    @include span (12 of 12);
+    .about{
+      @include breakpoint($bp-desktop) {
+        @include span (6 of 12);
+      }
+    }
+    img{
+      @include breakpoint($bp-desktop) {
+        @include span (6 of 12 last);
+      }
+    }
+  }
+  .ieee-hsb{
+    img{
+      @include span (6 of 12);
+    }
+    .details{
+      @include span (6 of 12 last)
+    }
+  }
+}
