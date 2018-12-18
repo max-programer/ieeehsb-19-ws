@@ -197,6 +197,7 @@
 .confereces {
     .content-wrap {
         position: relative;
+
         .entry-header {
             color: #363636;
             margin-top: 50px;
@@ -204,13 +205,33 @@
             margin: auto;
             border: 1px solid #363636;
             font-weight: 900;
-            @include breakpoint($bp-desktop){
+
+            @include breakpoint($bp-desktop) {
                 width: 50%;
                 font-size: 4rem
             }
         }
+
         .content-row {
             margin: 125px 0;
+
+            ul {
+                li {
+                    list-style-type: circle;
+                }
+            }
+            &:nth-child(even) {
+        
+            }
+        
+            &:nth-child(odd) {
+                direction: rtl !important;
+            }
+            &:last-child{
+                .frame{
+                    height: 380px !important;
+                }
+            }
         }
     }
 
@@ -220,15 +241,16 @@
         background-size: cover;
     }
 
+    
 }
 
 .faqs {
-    @include breakpoint($bp-desktop){
+    @include breakpoint($bp-desktop) {
         background-image: url('../../images/misc/FAQ.jpg');
         background-position: center center;
         background-size: cover;
     }
-    
+
 
     .faq {
         margin-bottom: 20px;
@@ -236,8 +258,6 @@
         h3 {
             font-weight: bold
         }
-
-        p {}
 
         ol {
             list-style-type: decimal;
